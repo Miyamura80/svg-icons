@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="#000">
+  <!-- Round head + soft body -->
+  <path d="M185 222 Q185 142 240 142 Q295 142 295 222 Q295 247 285 262 Q370 287 370 350 Q370 358 240 358 Q110 358 110 350 Q110 287 195 262 Q185 247 185 222 Z"/>
+  <!-- Rounded fedora crown -->
+  <path d="M170 178 Q170 95 215 90 Q235 95 240 110 Q245 95 265 90 Q310 95 310 178 Z"/>
+  <!-- WIDER brim -->
+  <path d="M70 184 Q240 158 410 184 Q410 200 240 216 Q70 200 70 184 Z"/>
+  <!-- Hat band -->
+  <path d="M172 178 Q240 168 308 178 L306 186 Q240 175 174 186 Z" fill="#fff"/>
+  <!-- V collar notches -->
+  <polygon points="198,264 220,310 240,272" fill="#fff"/>
+  <polygon points="282,264 260,310 240,272" fill="#fff"/>
+  <!-- Trapezoid laptop screen -->
+  <path d="M60 335 L420 335 L395 455 L85 455 Z"/>
+  <path d="M78 348 L402 348 L380 442 L100 442 Z" fill="#fff"/>
+  <circle cx="240" cy="395" r="6"/>
+  <!-- Keyboard base -->
+  <path d="M85 455 L395 455 L395 478 L85 478 Z"/>
+  <rect x="220" y="463" width="40" height="7" fill="#fff" rx="3"/>
+</svg>
