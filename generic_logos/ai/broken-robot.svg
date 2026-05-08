@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <!-- Mask: cuts cracks out of the OUTER black silhouette only.
+         The face-cutout area is already transparent via even-odd, no need to mask there. -->
+    <mask id="crackMask" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+      <rect width="256" height="256" fill="#ffffff"/>
+      <g stroke="#000000" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="50,80 80,110 75,140 95,165 80,200 105,225"/>
+        <polyline points="80,110 130,105 160,90 200,100"/>
+        <polyline points="130,105 145,140 175,150 215,140"/>
+        <polyline points="145,140 130,180 165,200 200,195"/>
+        <polyline points="130,180 115,210 145,240 180,235"/>
+        <polyline points="75,140 50,160 60,190 40,220"/>
+        <polyline points="160,90 175,60 200,75"/>
+        <polyline points="175,150 195,170 220,165"/>
+        <polyline points="200,195 215,225 195,245"/>
+        <polyline points="95,165 70,170 60,190"/>
+      </g>
+    </mask>
+  </defs>
+
+  <!-- Antenna: open circle + snapped stem (top piece + dislodged tilted piece) -->
+  <circle cx="128" cy="24" r="10" fill="none" stroke="#000000" stroke-width="6"/>
+  <rect x="125" y="34" width="6" height="10" fill="#000000"/>
+  <rect x="125" y="48" width="6" height="6" fill="#000000" transform="rotate(15 128 51)"/>
+
+  <!-- Body using vanilla's even-odd cutout path (face zone stays transparent) -->
+  <path fill-rule="evenodd" fill="#000000" mask="url(#crackMask)"
+        d="M40,144a88,88,0,0,1,176,0v44a44,44,0,0,1-44,44H84a44,44,0,0,1-44-44Z M92,116 h72 a28,28 0 0 1 28,28 v24 a28,28 0 0 1 -28,28 h-72 a28,28 0 0 1 -28,-28 v-24 a28,28 0 0 1 28,-28 z"/>
+
+  <!-- Eyes: black filled pills (matching vanilla) -->
+  <rect x="88" y="138" width="24" height="36" rx="12" fill="#000000"/>
+  <rect x="144" y="138" width="24" height="36" rx="12" fill="#000000"/>
+
+  <!-- Crack lines across the FACE zone (drawn directly, since face is transparent) -->
+  <g stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <polyline points="68,140 90,148 120,135 145,155 175,142 188,150"/>
+    <polyline points="100,168 125,162 150,176"/>
+  </g>
+
+  <!-- Two displaced shards (pieces broken off the silhouette edge) -->
+  <polygon points="50,80 80,110 75,140 50,135 40,100" fill="#000000" transform="translate(-10, -5)"/>
+  <polygon points="200,195 215,225 180,235 195,200" fill="#000000" transform="translate(10, 8)"/>
+
+  <!-- Loose floating shards (debris) -->
+  <polygon points="14,170 26,166 30,180 18,184" fill="#000000"/>
+  <polygon points="240,150 252,154 248,168 236,164" fill="#000000"/>
+  <polygon points="100,250 116,246 120,260 104,264" fill="#000000"/>
+</svg>
