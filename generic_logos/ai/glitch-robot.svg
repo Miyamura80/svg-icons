@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <!-- The full robot silhouette (head + face cutout via even-odd), reusable -->
+    <g id="robotBody">
+      <path fill-rule="evenodd" fill="#000000"
+            d="M40,144a88,88,0,0,1,176,0v44a44,44,0,0,1-44,44H84a44,44,0,0,1-44-44Z M92,116 h72 a28,28 0 0 1 28,28 v24 a28,28 0 0 1 -28,28 h-72 a28,28 0 0 1 -28,-28 v-24 a28,28 0 0 1 28,-28 z"/>
+      <rect x="88" y="138" width="24" height="36" rx="12" fill="#000000"/>
+      <rect x="144" y="138" width="24" height="36" rx="12" fill="#000000"/>
+    </g>
+    <g id="robotAntenna">
+      <circle cx="128" cy="24" r="10" fill="none" stroke="#000000" stroke-width="6"/>
+      <rect x="125" y="34" width="6" height="20" fill="#000000"/>
+    </g>
+
+    <!-- Mask removes thin horizontal bands from the main body, so re-drawn offset slices fill them -->
+    <mask id="sliceMask" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+      <rect width="256" height="256" fill="#ffffff"/>
+      <rect x="0" y="106" width="256" height="10" fill="#000000"/>
+      <rect x="0" y="135" width="256" height="8"  fill="#000000"/>
+      <rect x="0" y="155" width="256" height="6"  fill="#000000"/>
+      <rect x="0" y="195" width="256" height="10" fill="#000000"/>
+      <rect x="0" y="220" width="256" height="8"  fill="#000000"/>
+    </mask>
+
+    <!-- Per-slice clip rectangles -->
+    <clipPath id="sliceClip1"><rect x="0" y="106" width="256" height="10"/></clipPath>
+    <clipPath id="sliceClip2"><rect x="0" y="135" width="256" height="8"/></clipPath>
+    <clipPath id="sliceClip3"><rect x="0" y="155" width="256" height="6"/></clipPath>
+    <clipPath id="sliceClip4"><rect x="0" y="195" width="256" height="10"/></clipPath>
+    <clipPath id="sliceClip5"><rect x="0" y="220" width="256" height="8"/></clipPath>
+  </defs>
+
+  <!-- Soft ghost echoes (low opacity black silhouettes offset L/R) -->
+  <g opacity="0.18" transform="translate(-12,0)"><use href="#robotAntenna"/><use href="#robotBody"/></g>
+  <g opacity="0.18" transform="translate(12,0)"><use href="#robotAntenna"/><use href="#robotBody"/></g>
+  <g opacity="0.08" transform="translate(-22,1)"><use href="#robotAntenna"/><use href="#robotBody"/></g>
+  <g opacity="0.08" transform="translate(22,-1)"><use href="#robotAntenna"/><use href="#robotBody"/></g>
+
+  <!-- Glitched antenna with offset echo -->
+  <use href="#robotAntenna"/>
+  <g opacity="0.35" transform="translate(20,0)"><use href="#robotAntenna"/></g>
+
+  <!-- Main body with slice bands cut out (gaps will read as transparent) -->
+  <g mask="url(#sliceMask)"><use href="#robotBody"/></g>
+
+  <!-- Re-draw each slice band, offset horizontally, clipped to its band Y range -->
+  <g clip-path="url(#sliceClip1)"><g transform="translate(14,0)"><use href="#robotBody"/></g></g>
+  <g clip-path="url(#sliceClip2)"><g transform="translate(-18,0)"><use href="#robotBody"/></g></g>
+  <g clip-path="url(#sliceClip3)"><g transform="translate(20,0)"><use href="#robotBody"/></g></g>
+  <g clip-path="url(#sliceClip4)"><g transform="translate(-10,0)"><use href="#robotBody"/></g></g>
+  <g clip-path="url(#sliceClip5)"><g transform="translate(6,0)"><use href="#robotBody"/></g></g>
+
+  <!-- Edge tick artifacts at slice boundaries -->
+  <g fill="#000000">
+    <rect x="36"  y="113" width="6" height="2"/>
+    <rect x="216" y="113" width="6" height="2"/>
+    <rect x="30"  y="158" width="5" height="2"/>
+    <rect x="220" y="158" width="6" height="2"/>
+    <rect x="34"  y="200" width="5" height="2"/>
+    <rect x="218" y="200" width="6" height="2"/>
+  </g>
+
+  <!-- Stray pixel debris around the figure -->
+  <g fill="#000000">
+    <rect x="8"   y="146" width="3" height="3"/>
+    <rect x="14"  y="152" width="2" height="2"/>
+    <rect x="22"  y="158" width="2" height="2"/>
+    <rect x="244" y="160" width="3" height="3"/>
+    <rect x="250" y="172" width="2" height="2"/>
+    <rect x="236" y="180" width="2" height="2"/>
+    <rect x="60"  y="100" width="2" height="2"/>
+    <rect x="195" y="98"  width="2" height="2"/>
+    <rect x="118" y="240" width="3" height="3"/>
+  </g>
+</svg>
