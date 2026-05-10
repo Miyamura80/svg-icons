@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 660">
+  <defs>
+    <mask id="cutouts" maskUnits="userSpaceOnUse" x="0" y="0" width="680" height="660">
+      <rect x="0" y="0" width="680" height="660" fill="white"/>
+      <circle cx="215" cy="170" r="28" fill="black"/>
+      <circle cx="495" cy="350" r="28" fill="black"/>
+      <circle cx="345" cy="270" r="138.0" fill="none" stroke="black" stroke-width="14"/>
+      <path d="M 130 645 Q 130 435 345 400 Q 560 435 560 645"
+            fill="none" stroke="black" stroke-width="14"/>
+    </mask>
+  </defs>
+  <g fill="#000000" mask="url(#cutouts)">
+    <g transform="translate(215 170) rotate(0)"><circle r="78"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(0.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(45.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(90.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(135.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(180.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(225.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(270.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(315.0)"/></g>
+    <g transform="translate(495 350) rotate(22)"><circle r="78"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(0.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(45.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(90.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(135.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(180.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(225.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(270.0)"/><rect x="-18.0" y="-116.0" width="36" height="42" rx="3" transform="rotate(315.0)"/></g>
+    <circle cx="345" cy="270" r="130"/>
+    <path d="M 130 645 Q 130 435 345 400 Q 560 435 560 645 Z"/>
+  </g>
+</svg>
